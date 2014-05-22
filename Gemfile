@@ -6,6 +6,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'aws-sdk'
+gem 'newrelic_rpm'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
