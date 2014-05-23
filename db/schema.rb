@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515032843) do
+ActiveRecord::Schema.define(version: 20140523030426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,18 @@ ActiveRecord::Schema.define(version: 20140515032843) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "massages", force: true do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.text     "description"
+    t.string   "options"
+    t.string   "suboptions"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
+  end
 
   create_table "products", force: true do |t|
     t.string   "name"
