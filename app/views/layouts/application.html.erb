@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Shutuprelax2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Shutup Relax</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- Styles -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans' rel='stylesheet' type='text/css'/>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <%= javascript_include_tag "vendor/modernizr-2.7.1.min.js" %>
+    <!--[if lt IE 9]
+    <%= javascript_include_tag "vendor/respond.min.js" %>
+    <![endif]-->
+
+    <%= csrf_meta_tags %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-sm-12">
+            <p>&copy; 2014 SHUTUPRELAX</p>
+          </div>
+          <div class="col-md-4 col-sm-12 hidden-sm hidden-xs">
+            <ul class="list-unstyled list-inline nav-footer text-center">
+              <li><a href="/about">About</a></li>
+              <li><a href="/work">Massage Menu</a></li>
+<!--               <li><a href="/social">Social</a></li> -->
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <ul class="list-unstyled list-inline social-links">
+              <li>FOLLOW ME:</li>
+<!--               <li><a href="https://twitter.com/GFStudiosSEA" target="_blank"><i class="ss-icon ss-social-circle ss-twitter"></i></a></li> -->
+              <li><a href="https://www.facebook.com/pages/Sarah-Rangel-MT/346963532115122" target="_blank"><i class="ss-icon ss-social-circle ss-facebook"></i></a></li>
+<!--               <li><a href="http://instagram.com/glutenfreestudios" target="_blank"><i class="ss-icon ss-social-circle ss-instagram"></i></a></li>
+              <li><a href="http://www.pinterest.com/glutenfrees/" target="_blank"><i class="ss-icon ss-social-circle ss-pinterest"></i></a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 </body>
 </html>

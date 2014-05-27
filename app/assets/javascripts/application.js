@@ -10,7 +10,11 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
+
+//= require jquery-1.11.0.min.js
 //= require turbolinks
-//= require_tree .
+//= require skrollr.min.js
+//= require imagesloaded.js
+//= require bootstrap.min.js
+//= require youtube-callplayer.js
+//= require default.js

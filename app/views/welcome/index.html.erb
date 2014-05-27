@@ -1,4 +1,53 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<div class="wrapper">
+  <%= render 'layouts/navigation' %>
+
+  <!-- Parallax
+  ================================================== -->
+  <div id="homeContent" class="parallax-slides">
+    <div id="preload">
+      <%= image_tag( "gf_hp1.jpg", :alt=>"Shutup Relax" ) %>
+      <%= image_tag( "gf_hp2.jpg", :alt=>"Shutup Relax" ) %>
+      <%= image_tag( "gf_hp3.jpg", :alt=>"Shutup Relax" ) %>
+    </div>
+    <section id="slide-001" class="slide-001 slide skrollr-body">
+      <div class="bg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% 100px;" data-anchor-target="#slide-001">
+        <div class="slide-container container" data-top="background-color: rgba(0,0,0,0)" data-center="background-color: rgba(0,0,0,.2)" data-bottom="background-color: rgba(0,0,0,0)">
+          <div id="textFade1" class="caption textFade1" data-center="bottom: 200px; opacity: 1" data-top="bottom: 1200px; opacity: 0">
+            <h1 class="string string-4">Shutup. And. Just. Relax.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="slide-divider hidden-xs">
+        <a href="#slide-002" class="btn-bug">
+          <%#= image_tag( "gluten_free_circle.png", :alt=>"Shutup Relax", :class=>"img-responsive" ) %>
+          <%= image_tag( "", :alt=>"Shutup Relax", :class=>"img-responsive" ) %>
+        </a>
+      </div>
+    </section>
+    <section id="slide-002" class="slide-002 slide skrollr-body">
+      <div class="bg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 45% 100px;" data-anchor-target="#slide-002">
+        <div class="slide-container container" data-top="background-color: rgba(0,0,0,0)" data-center="background-color: rgba(0,0,0,.2)" data-bottom="background-color: rgba(0,0,0,0)">
+          <div id="textFade2" class="caption textFade2" data-center="bottom: 200px; opacity: 1" data-top="bottom: 1200px; opacity: 0">
+              <span class="string string-1">Sarah Rangel is and some text about her<br> specializing in the, that&nbsp;this&nbsp;here&nbsp;there.</span>
+          </div>
+        </div>
+      </div>
+      <div class="slide-divider hidden-xs">
+        <a href="#slide-003" class="btn-bug">
+          <%#= image_tag( "gluten_free_circle.png", :alt=>"Shutup Relax", :class=>"img-responsive" ) %>
+          <%= image_tag( "", :alt=>"Shutup Relax", :class=>"img-responsive" ) %>
+        </a>
+      </div>
+    </section>
+    <section id="slide-003" class="slide-003 slide skrollr-body">
+      <div class="bg" data-center="background-position: 50% 100px;" data-bottom="background-position: 50% 0px;" data-anchor-target="#slide-003">
+        <div class="slide-container container" data-top="background-color: rgba(0,0,0,0)" data-center="background-color: rgba(0,0,0,.2)" data-bottom="background-color: rgba(0,0,0,0)">
+          <div id="textFade3" class="caption textFade3" data-center="bottom: 200px;" data-top="bottom: 1200px;">
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="push"></div>
+</div>
