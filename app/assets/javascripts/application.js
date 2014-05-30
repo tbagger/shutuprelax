@@ -10,7 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
 //= require jquery-1.11.0.min.js
 //= require turbolinks
 //= require skrollr.min.js

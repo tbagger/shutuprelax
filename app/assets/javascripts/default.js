@@ -112,8 +112,8 @@
             });
 
             //set Title and desc of the pushpin
-            // pin.Title = "gluten free studios";
-            // pin.Description = "259 SW 41st St, Renton, WA 98057";
+            pin.Title = "gluten free studios";
+            pin.Description = "259 SW 41st St, Renton, WA 98057";
 
             //create info box
             infobox = new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(47.443802, -122.220642), {
