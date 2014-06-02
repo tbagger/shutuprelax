@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+
+  resources :shutuprelax , only: [:index] do
+    get :about, on: :collection
+  end
+
+  match 'about', to: 'shutuprelax#about', via: [:get]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
