@@ -7730,7 +7730,7 @@ p {
 }
 /* line 327, /Users/justinstevens/Creative Cloud Files/r5i_dev/GlutenFree/GlutenFree_Update/css/less/_glutenfree-theme.less */
 .parallax-slides .slide-003 .bg {
-    background-image: url('../images/gf_hp3.jpg');
+    background-image: url('../images/sr_h3.jpg');
 }
 /* line 331, /Users/justinstevens/Creative Cloud Files/r5i_dev/GlutenFree/GlutenFree_Update/css/less/_glutenfree-theme.less */
 .touch .parallax-slides .bg {
@@ -8030,7 +8030,7 @@ p {
 /* == Clients Content ================================================================ */
 /* line 601, /Users/justinstevens/Creative Cloud Files/r5i_dev/GlutenFree/GlutenFree_Update/css/less/_glutenfree-theme.less */
 .page-clients.bg-ocean {
-    background: url(../images/gf_hp3.jpg) no-repeat center center;
+    background: url(../images/sr_h3.jpg) no-repeat center center;
     background-size: cover;
 }
 /* line 606, /Users/justinstevens/Creative Cloud Files/r5i_dev/GlutenFree/GlutenFree_Update/css/less/_glutenfree-theme.less */
@@ -8138,7 +8138,7 @@ p {
 #preload_area {
     background-image: image-url('images/gf_hp1.jpg');
     background-image: image-url('images/gf_hp2.jpg');
-    background-image: image-url('images/gf_hp3.jpg');
+    background-image: image-url('images/sr_h3.jpg');
     width: 0px;
     height: 0px;
     display: none;
