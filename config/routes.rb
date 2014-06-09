@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   resources :shutuprelax , only: [:index] do
     get :about, on: :collection
   end
-  resources :massage, only: [:index], path: 'massage'
+  resources :massage, only: [:index, :show]
+  resources :products, only: [:index, :show]
+  resources :contacts, only: [:new, :create], path: 'contact', path_names: { new: ''}
 
   match 'about', to: 'shutuprelax#about', via: [:get]
 

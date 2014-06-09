@@ -1,0 +1,84 @@
+<body>
+        <!--[if lt IE 9]>
+            <p class="alert alert-danger m-top">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<div class="wrapper">
+  <%= render 'layouts/navigation' %>
+
+<div class="main">
+  <div class="container">
+  <% if flash[:notice] %>
+      <div id="notice" class="alert alert-warning">
+        <p class="h4"><%= flash[:notice] %></p>
+      </div>
+  <% end %>
+
+    <div class="page-title">
+      <h1>contact</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="media">
+          <div class="pull-left">
+            <i class="icon icon-location media-object"></i>
+          </div>
+          <div class="media-body">
+            <p><address>
+            <strong>Shutuprelax - Sarah Rangel MT</strong><br>
+            address ?
+          </address></p>
+            <p><strong>TEL:</strong> 858-366-8427</p>
+            <a href="http://clients.mindbodyonline.com/ws.asp?studioid=144795&amp;stype=-9&amp;sView=week&amp;sTrn=100000004" title="Book Your Next Appointment" target="_blank" class="btn btn-primary btn-large"><em class="icon-calendar icon-white"></em>Book Your Next Appointment Here</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="media">
+          <div class="pull-left">
+            <i class="icon icon-talkbuble media-object"></i>
+          </div>
+          <div class="media-body">
+            <p><strong>send me a message</strong></p>
+
+
+            <%= form_for @contact, :html => {:role => 'form'} do |f| %>
+                <div class="form-group">
+                  <%= f.label :name, 'enter your name', class: 'sr-only' %>
+                  <%= f.text_field :name, class: 'form-control', placeholder: 'enter your name' %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :email, 'email', class: 'sr-only' %>
+                  <%= f.text_field :email, class: 'form-control', placeholder: 'enter your email address' %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :message, 'talk to us...', class: 'sr-only' %>
+                  <%= f.text_area :message, class: 'form-control', :rows => 3, placeholder: 'talk to me...' %>
+                </div>
+                <div class="form-group">
+                  <%= f.submit 'Submit', class: 'btn btn-default' %>
+                </div>
+
+                <% if @contact.errors.any? %>
+                    <div class="alert alert-danger">
+                      <ul>
+                        <% @contact.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                <% end %>
+
+
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--   <div id="map-canvas" class="map-canvas"></div> -->
+</div>
+
+<div class="push"></div>
+
+</div>

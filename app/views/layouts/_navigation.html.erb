@@ -29,6 +29,14 @@
             <li><a href="/massage">Massage Menu</a></li>
         <% end %>
 
+        <% if request.path == "/products/#{params[:id]}" %>
+            <li class="active"><a href="/products">Products</a></li>
+        <% elsif request.path == "/products" %>
+            <li class="active"><a href="/products">Products</a></li>
+        <% else %>
+            <li><a href="/products">Products</a></li>
+        <% end %>
+
         <% if request.path == "/contact" %>
             <li class="active"><a href="/contact">Contact</a></li>
         <% else %>
