@@ -2,6 +2,7 @@
         <!--[if lt IE 9]>
             <p class="alert alert-danger m-top">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
 <div class="wrapper">
 
   <%= render 'layouts/navigation' %>
@@ -11,102 +12,27 @@
       <div class="page-title">
         <h1>massage menu</h1>
       </div>
-
-      <div class="row work-grid">
-        <div class="col-lg-12 col-md-11 col-sm-12 col-xs-10">
-
-            <div class="work-item">
-              <a class="work-image" href="work/work-case1.html">
-                <span class="btn-arrow"><i class="fa fa-angle-right"></i></span>
-                <img src="http://img.youtube.com/vi/Ic5fre38u5A/hqdefault.jpg" alt="">
-              </a>
-              <div class="workCaption">
-                <h4>CASE STUDY 1</h4>
-                <h5>Microsoft OEM: Lifestyle Sizzles</h5>
-              </div>
-            </div> <!-- /.work-item -->
-
-            <div class="work-item">
-              <a class="work-image" href="work/work-case2.html">
-                <span class="btn-arrow"><i class="fa fa-angle-right"></i></span>
-                <img src="http://img.youtube.com/vi/BoqP9ppG6Hg/hqdefault.jpg" alt="">
-              </a>
-              <div class="workCaption">
-                <h4>CASE STUDY 2</h4>
-                <h5>Harman Audio: Product Videos (Onyx)</h5>
-              </div>
-            </div> <!-- /.work-item -->
-
-            <div class="work-item">
-              <a class="work-image" href="work/work-case3.html">
-                <span class="btn-arrow"><i class="fa fa-angle-right"></i></span>
-                <img src="http://img.youtube.com/vi/UXXOkXitV1o/hqdefault.jpg" alt="">
-              </a>
-              <div class="workCaption">
-                <h4>CASE STUDY 3</h4>
-                <h5>Microsoft Surface: Click In and Do More videos</h5>
-              </div>
-            </div> <!-- /.work-item -->
-
-            <div class="work-item">
-              <a class="work-image" href="work/work-case4.html">
-                <span class="btn-arrow"><i class="fa fa-angle-right"></i></span>
-                <img src="http://img.youtube.com/vi/NFryz2Y9eBI/hqdefault.jpg" alt="">
-              </a>
-              <div class="workCaption">
-                <h4>CASE STUDY 4</h4>
-                <h5>Windows Phone: Smoked By Windows Phone</h5>
-              </div>
-            </div> <!-- /.work-item -->
-
-            <div class="work-item">
-              <a class="work-image" href="work/work-case5.html">
-                <span class="btn-arrow"><i class="fa fa-angle-right"></i></span>
-                <img src="http://dummyimage.com/600x600/CCC/333" alt="">
-              </a>
-              <div class="workCaption">
-                <h4>CASE STUDY 5</h4>
-                <h5>MSN: Are You Fast?</h5>
-              </div>
-            </div> <!-- /.work-item -->
-
-            <div class="work-item">
-              <a class="work-image" href="work/work-case6.html">
-                <span class="btn-arrow"><i class="fa fa-angle-right"></i></span>
-                <img src="http://dummyimage.com/600x600/CCC/333" alt="">
-              </a>
-              <div class="workCaption">
-                <h4>CASE STUDY 6</h4>
-                <h5>Microsoft Windows: iPad Compete</h5>
-              </div>
-            </div> <!-- /.work-item -->
-
-            <div class="work-item">
-              <a class="work-image" href="work/work-case7.html">
-                <span class="btn-arrow"><i class="fa fa-angle-right"></i></span>
-                <img src="images/work-madhouse-1001.jpg" alt="">
-              </a>
-              <div class="workCaption">
-                <h4>CASE STUDY 7</h4>
-                <h5>The Madhouse Project: Night Out for a Cure</h5>
-              </div>
-            </div> <!-- /.work-item -->
-
-            <div class="work-item">
-              <a class="work-image" href="work/work-case8.html">
-                <span class="btn-arrow"><i class="fa fa-angle-right"></i></span>
-                <img src="http://img.youtube.com/vi/YgpUHMEeXok/hqdefault.jpg" alt="">
-              </a>
-              <div class="workCaption">
-                <h4>CASE STUDY 8</h4>
-                <h5>Windows Phone: HTC 8S &amp; 8X Video</h5>
-              </div>
-            </div> <!-- /.work-item -->
-
-        </div>
-      </div> <!-- /.work-grid -->
-
     </div>
+    <div class="container work-grid">
+      <div class="row">
+        <div class="col-lg-12 col-md-11 col-sm-12">
+          <% @massages.each do |m| %>
+          <div class="work-item">
+            <a class="work-image" href='<%= massage_path(m.id) %>'>
+              <span class="btn-arrow"><i class="fa fa-angle-right"></i></span>
+              <%= image_tag( m.thumbnail, :alt=>"" ) %>
+            </a>
+            <div class="workCaption">
+              <%= link_to massage_path(m) do %>
+                <h5><%= m.title %></h5>
+              <% end %>
+            </div>
+          </div> <!-- /.works-item -->
+          <% end %>
+        </div>
+      </div>
+
+    </div><!-- /.works-grid -->
   </div>
 
   <div class="push"></div>
