@@ -1,1 +1,71 @@
-massage show page
+<body>
+        <!--[if lt IE 9]>
+            <p class="alert alert-danger m-top">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<div class="wrapper">
+  <%= render 'layouts/navigation' %>
+
+  <div class="main">
+    <div class="container">
+      <div class="page-title">
+        <h1> <a href="/glutenfree/work" class="back-towork"><i class="fa fa-angle-left"></i></a><%= @massage.title %></h1>
+      </div>
+    </div>
+
+    <div class="container work-container">
+      <div id="work-carousel" class="work-carousel carousel slide" data-ride="carousel" data-interval="0">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag @massage.thumbnail.url %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container work-container title-row">
+      <h2><%= @massage.title %> <small><%= @massage.subtitle %></small></h2>
+    </div>
+
+    <% if @massage.description.blank? %>
+      <div class="container work-container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p class="text-justify">
+              <strong class="text-loud p-right">OPTIONS</strong> <%= @massage.options %>
+            </p>
+            <% unless @massage.suboptions.blank? %>
+              <p class="text-justify">
+                <i><%= @massage.suboptions %></i>
+              </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% else %>
+
+      <div class="container work-container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p class="text-justify">
+              <strong class="text-loud p-right">DESCRIPTION</strong> <%= @massage.description %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-justify">
+              <strong class="text-loud p-right">OPTIONS</strong> <%= @massage.options %>
+            </p>
+            <% unless @massage.suboptions.blank? %>
+              <p class="text-justify">
+                <i><%= @massage.suboptions %></i>
+              </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+  <div class="push"></div>
+</div>

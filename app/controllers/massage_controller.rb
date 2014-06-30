@@ -4,6 +4,6 @@ class MassageController < ApplicationController
   end 
 
   def show
-
+    @massage = Massage.find(params[:id])
   end
 end
