@@ -4,5 +4,6 @@ class Product < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
   validates :name, presence: true
+  validates :priority, presence: true
 
 end
