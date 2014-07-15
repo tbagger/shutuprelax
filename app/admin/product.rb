@@ -21,6 +21,7 @@ ActiveAdmin.register Product do
       f.input :size
       f.input :description, :input_html => {:rows => 5, :cols => 10}
       f.input :photo, :label => 'Photo:', :as => :file, :hint => f.object.photo.present? ? f.template.image_tag(f.object.photo.url(:thumb)) : f.template.content_tag(:span, "no image uploaded yet")
+      f.input :priority
     end
     f.actions
   end
