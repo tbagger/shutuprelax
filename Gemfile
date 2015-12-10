@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.1"
+ruby "2.2.3"
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
@@ -9,7 +9,7 @@ gem 'aws-sdk'
 gem 'newrelic_rpm'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -50,4 +50,15 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'rails_12factor', group: :production
+
+# Use Capistrano for deployment
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', '~> 1.1.3'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails-collection'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rails-console'
+end
 

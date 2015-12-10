@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: shutuprelax2_production
-  # username: shutuprelax2
+  database: shutuprelax_prod
+  username: shutuprelax
   password: <%= ENV['SHUTUPRELAX2_DATABASE_PASSWORD'] %>
