@@ -9,7 +9,7 @@
 
 set :rails_env, 'production'
 set :deploy_to, '/var/www/sites/shutuprelax.com'
-server 'dev.alamosbasement', user: 'admin', roles: %w{app db web}
+server 'dev.alamosbasement.com', user: 'admin', roles: %w{app db web}
 
 
 
