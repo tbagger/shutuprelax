@@ -7,11 +7,13 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-set :rails_env, 'production'
 set :deploy_to, '/var/www/sites/shutuprelax.com'
 server 'dev.alamosbasement.com', user: 'admin', roles: %w{app db web}
 
-
+set :rails_env, 'production'
+set :migrate_env, 'production'
+set :rvm_ruby_version, '2.2.3@shutuprelax2'
+set :passenger_rvm_ruby_version, '2.2.1'
 
 # role-based syntax
 # ==================

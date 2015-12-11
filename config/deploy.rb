@@ -34,7 +34,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :rvm_ruby_version, '2.2.3@shutuprelax2'
+set :passenger_restart_with_touch, false
 
 namespace :deploy do
 
@@ -44,7 +44,6 @@ namespace :deploy do
       # within release_path do
       #   execute :rake, 'cache:clear'
       # end
-      execute :touch, release_path.join('tmp/restart.txt')
     end
   end
 
