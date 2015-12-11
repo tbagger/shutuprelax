@@ -35,6 +35,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 # set :keep_releases, 5
 
 set :rvm_ruby_version, '2.2.3@shutuprelax2'
+set :passenger_restart_with_sudo, true
 
 namespace :deploy do
 
