@@ -93,12 +93,12 @@ Rails.application.configure do
   #   :enable_starttls_auto => true
   # }
 
-  # config.paperclip_defaults = {
-  #   :storage => :s3,
-  #   :s3_credentials => {
-  #     :bucket => ENV['S3_BUCKET_NAME'],
-  #     :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-  #     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-  #   }
-  # }
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => Rails.application.secrets.aws_s3_bucket,
+      :access_key_id => Rails.application.secrets.aws_secret_access_key,
+      :secret_access_key => Rails.application.secrets.secret_key_base
+    }
+  }
 end
