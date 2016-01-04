@@ -107,6 +107,8 @@ Rails.application.configure do
   :storage => :s3,
   :s3_region => 'Oregan',
   # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
-  :bucket => Rails.application.secrets.aws_s3_bucket
+  s3_credentials => {
+    :bucket => Rails.application.secrets.aws_s3_bucket
+  }  
 }
 end
