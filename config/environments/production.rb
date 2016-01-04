@@ -97,9 +97,9 @@ Rails.application.configure do
     :storage => :s3,
       :s3_region => "us-west-2.amazonaws.com",
     :s3_credentials => {
-      :bucket => Rails.application.secrets.aws_s3_bucket
-      #:access_key_id => Rails.application.secrets.aws_secret_access_key,
-      #:secret_access_key => Rails.application.secrets.secret_key_base
+      :bucket => Rails.application.secrets.aws_s3_bucket,
+      :access_key_id => Rails.application.secrets.aws_secret_access_key,
+      :secret_access_key => Rails.application.secrets.secret_key_base
     }
   }
 
