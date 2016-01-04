@@ -101,14 +101,6 @@ Rails.application.configure do
       :access_key_id => Rails.application.secrets.aws_secret_access_key,
       :secret_access_key => Rails.application.secrets.secret_key_base
     }
-  }
-
-  # config.paperclip_defaults = {
-  # :storage => :s3,
-  # :s3_region => 'Oregan',
-  # # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
-  # :s3_credentials => {
-  #   :bucket => Rails.application.secrets.aws_s3_bucket
-  # }  
+  } 
 }
 end
