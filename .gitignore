@@ -20,4 +20,5 @@ public/assets
 
 config/database.yml
 config/secrets.yml
+config/aws.yml
 .DS_Store
