@@ -95,7 +95,7 @@ Rails.application.configure do
 
   config.paperclip_defaults = {
     :storage => :s3,
-      region: "Oregan"
+      region: "Oregan",
     :s3_credentials => {
       :bucket => Rails.application.secrets.aws_s3_bucket,
       :access_key_id => Rails.application.secrets.aws_secret_access_key,
