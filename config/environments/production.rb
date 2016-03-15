@@ -85,15 +85,14 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
-  # ActionMailer::Base.smtp_settings = {
-  #   :address        => 'smtp.gmail.com',
-  #   :port           => '587',
-  #   :authentication => :plain,
-  #   :user_name      => ENV['SENDGRID_USERNAME'],
-  #   :password       => ENV['SENDGRID_PASSWORD'],
-  #   :domain         => 'heroku.com',
-  #   :enable_starttls_auto => true
-  # }
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sparkpostmail.com',
+    :port           => '587',
+    :authentication => 'AUTH LOGIN',
+    :encryption     => 'STARTTLS'
+    :user_name      => Rails.application.secrets.sparkpost_username,
+    :password       => Rails.application.secrets.sparkpost_password
+  }
 
   config.paperclip_defaults = {
     :storage => :s3,
