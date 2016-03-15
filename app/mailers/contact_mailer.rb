@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-  default from: 'mailer@sparkpostbox.com'
+  default from: 'mailer@shutuprelax.com'
 
   def contact_email(message)
     @message = message
