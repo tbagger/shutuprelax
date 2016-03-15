@@ -89,7 +89,7 @@ Rails.application.configure do
     :address        => 'smtp.sparkpostmail.com',
     :port           => '587',
     :authentication => 'AUTH LOGIN',
-    :encryption     => 'STARTTLS'
+    :encryption     => 'STARTTLS',
     :user_name      => Rails.application.secrets.sparkpost_username,
     :password       => Rails.application.secrets.sparkpost_password
   }
